@@ -4,7 +4,7 @@ let _state = {
   cars: [new Car({
     make: "Chevy",
     model: "Tracker",
-    year: 1989,
+    year: 1989, 0
     price: 0,
     imgUrl: "http://carphotos.cardomain.com/ride_images/2/4819/1781/24545890001_large.jpg",
     description: "Itsa trackin"
