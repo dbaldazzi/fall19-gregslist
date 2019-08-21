@@ -1,15 +1,12 @@
 import Jobs from "../models/jobs.js";
-import Car from "../models/Car.js";
 
 let _state = {
   jobs: [new Jobs({
-    type: "Stick",
-    size: "2000sqft",
-    bedrooms: 4,
-    bathrooms: 2,
-    year: 2000,
-    price: "$400,000",
-    description: "Four bed, Two bath home with 2000 sqft"
+    type: "Office",
+    salary: "$50,000",
+    hours: "8am-5pm",
+    days: "M-F",
+    description: "Make $50,000 sitting in an office"
   })]
 }
 
@@ -21,4 +18,18 @@ export default class JobService {
       }
     })
   }
-}
+
+
+  addJob(newJob) {
+    _state.jobs.push(new Jobs(newJob))
+    console.log(_state.jobs)
+  }
+
+  constructor() {
+    console.log("hello from service")
+    console.log(_state.jobs)
+  }
+  get Jobs() {
+    return _state.jobs.map(job => new Jobs(job))
+  }
+} 

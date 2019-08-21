@@ -16,10 +16,10 @@ export default class Jobs {
     <h3>${this.salary}</h3>
     <p>${this.hours}</p>
     <p>${this.days}</p> 
-    <p>${this.year}</p> 
     <p>${this.description}</p> 
     <button class="btn btn-danger" onclick="app.controller.jobsController.deleteJob(${this._id}">Delete Job</button>
     </div> 
     `
   }
 }
+console.log("Hello from jobs")
