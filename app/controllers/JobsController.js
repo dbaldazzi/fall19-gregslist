@@ -4,7 +4,7 @@ import Jobs from "../models/jobs.js";
 //import CarService from "../services/CarService.js";
 
 let _jobsService = new JobService()
-
+debugger
 
 function _draw() {
   let template = ""
@@ -22,23 +22,24 @@ export default class JobsController {
     console.log("hello from controller")
     _draw()
   }
-}
-deleteJob(id) {
-  _jobsService.deleteJob(_id)
-  _draw(
-}
 
-addJobs(event) {
-  event.preventDefault()
-  let form = event.target
-
-  let newJobs = {
-    type: form.type.value,
-    salary: form.salary.value,
-    hours: form.hours.value,
-    days: form.days.value,
-    description: form.descrition.value
+  deleteJob(id) {
+    _jobsService.deleteJob(id)
+    _draw()
   }
-  _jobsService.addJob(newJobs)
-  _draw()
+
+  addJob(event) {
+    event.preventDefault()
+    let form = event.target
+
+    let newJobs = {
+      type: form.type.value,
+      salary: form.salary.value,
+      hours: form.hours.value,
+      days: form.days.value,
+      description: form.descrition.value
+    }
+    _jobsService.addJob(newJobs)
+    _draw()
+  }
 }
