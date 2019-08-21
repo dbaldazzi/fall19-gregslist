@@ -10,26 +10,25 @@ function _draw() {
   let template = ""
   let job = _jobsService.Jobs
 
-  Jobs.foreach((jobs, index) => {
+  Jobs.forEach((job, index) => {
     template += job.template
   })
 
   document.querySelector("#jobs").innerHTML = template
 }
-
+console.log("controller")
 export default class JobsController {
   constructor() {
     console.log("hello from controller")
     _draw()
   }
 }
-debugger
-delete (id) {
+deleteJob(id) {
   _jobsService.deleteJob(_id)
   _draw(
 }
 
-addjob(event) {
+addJobs(event) {
   event.preventDefault()
   let form = event.target
 

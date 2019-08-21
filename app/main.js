@@ -9,5 +9,5 @@ class App {
   }
 }
 
-
+console.log("main")
 window["app"] = new App()
