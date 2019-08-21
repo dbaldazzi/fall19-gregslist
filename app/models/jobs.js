@@ -9,7 +9,7 @@ export default class Jobs {
     this.days = data.days
     this.description = data.description || "No description provided"
   }
-  get Template() {
+  get template() {
     return `
     <div class="col-r border"> 
     <h1>${this.type}</h1>

@@ -17,20 +17,19 @@
       <form onsubmit="app.controllers.carController.addCar(event)" class="col-5">
         <div class="form-group">
           <label for="type">Type</label>
-          <input type="text" class="form-control" name="make" id="make" placeholder="Type in a make" required>
+          <input type="text" class="form-control" name="make" id="type" placeholder="Type in a type" required>
         </div>
         <div class="form-group">
           <label for="salary">Salary</label>
-          <input type="text" class="form-control" name="model" id="model" placeholder="Type in a model" required>
+          <input type="text" class="form-control" name="model" id="salary" placeholder="Type in a Salary" required>
         </div>
         <div class="form-group">
           <label for="hours">hours</label>
-          <input type="number" min="1890" max="2021" class="form-control" name="year" id="year"
-            placeholder="pick a year" required>
+          <input type="number" class="form-control" name="year" id="hours" placeholder="type in hours" required>
         </div>
         <div class="form-group">
-          <label for="price">Price</label>
-          <input type="number" class="form-control" name="price" id="price" placeholder="Type in a price" required>
+          <label for="Days">Days</label>
+          <input type="number" class="form-control" name="price" id="days" placeholder="Type in a day" required>
         </div>
         <div class="form-group">
           <label for="description">Description</label>
@@ -41,7 +40,7 @@
         <button type="submit" class="btn btn-primary">Make Job</button>
       </form>
     </div>
-    <div id="cars" class="row">
+    <div id="jobs" class="row">
 
     </div>
   </div>
